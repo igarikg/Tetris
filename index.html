@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris (MVP)</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1 class="title">TETRIS</h1>
+
+        <div class="hud">
+          <div class="hudItem"><span class="hudLabel">LINES</span><span id="lines">0</span></div>
+          <div class="hudItem"><span class="hudLabel">SCORE</span><span id="score">0</span></div>
+          <div class="hudItem"><span class="hudLabel">HIGH SCORE</span><span id="highScore">0</span></div>
+          <button id="newGame" class="btn" type="button">NEW GAME</button>
+        </div>
+      </header>
+
+      <section class="stage" aria-label="Tetris game">
+        <div class="stageInner">
+          <canvas id="canvas" width="300" height="600"></canvas>
+
+          <aside class="sidebar" aria-label="Next piece">
+            <div class="panel">
+              <div class="panelTitle">NEXT</div>
+              <canvas id="nextCanvas" width="120" height="120"></canvas>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="help">
+        <div><strong>←</strong>/<strong>→</strong> MOVE, <strong>↑</strong> ROTATE, <strong>↓</strong> HARD DROP</div>
+        <div><strong>P</strong> PAUSE, <strong>SPACE</strong> NEW GAME, <strong>F1</strong> HELP</div>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
