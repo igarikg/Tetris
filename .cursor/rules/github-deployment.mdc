@@ -1,0 +1,58 @@
+---
+description: GITHUB DEPLOYMENT WORKFLOW FOR TETRIS PROJECT
+alwaysApply: true
+---
+
+# GITHUB DEPLOYMENT RULE
+
+## REPOSITORY INFORMATION
+
+- **REPOSITORY URL**: https://github.com/igarikg/Tetris.git
+- **BRANCH**: main
+- **GIT PATH**: "C:\Program Files\Git\cmd\git.exe"
+
+## DEPLOYMENT WORKFLOW
+
+WHEN THE USER REQUESTS TO DEPLOY, PUSH, OR UPDATE THE GITHUB REPOSITORY, FOLLOW THESE STEPS:
+
+### 1. CHECK STATUS
+```powershell
+& "C:\Program Files\Git\cmd\git.exe" status
+```
+
+### 2. STAGE CHANGES
+```powershell
+& "C:\Program Files\Git\cmd\git.exe" add .
+```
+
+### 3. CREATE COMMIT
+```powershell
+& "C:\Program Files\Git\cmd\git.exe" commit -m "YOUR COMMIT MESSAGE IN CAPITALS"
+```
+
+### 4. PUSH TO GITHUB
+```powershell
+& "C:\Program Files\Git\cmd\git.exe" push origin main
+```
+
+## COMMIT MESSAGE GUIDELINES
+
+- USE CAPITAL LETTERS FOR ALL COMMIT MESSAGES (FOLLOWING PROJECT CONVENTION)
+- BE DESCRIPTIVE BUT CONCISE
+- EXAMPLES:
+  - "ADD NEW FEATURE: PAUSE FUNCTIONALITY"
+  - "FIX BUG: COLLISION DETECTION"
+  - "UPDATE STYLES: GAME BOARD COLORS"
+
+## QUICK DEPLOYMENT COMMAND
+
+FOR QUICK DEPLOYMENTS, USE A SINGLE COMMAND:
+```powershell
+& "C:\Program Files\Git\cmd\git.exe" add . ; & "C:\Program Files\Git\cmd\git.exe" commit -m "UPDATE" ; & "C:\Program Files\Git\cmd\git.exe" push origin main
+```
+
+## NOTES
+
+- ALWAYS CHECK `git status` BEFORE COMMITTING
+- IF PUSH FAILS, CHECK INTERNET CONNECTION AND GITHUB AUTHENTICATION
+- USE FULL PATH TO GIT EXECUTABLE IN POWERSHELL UNTIL PATH IS REFRESHED
